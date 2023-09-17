@@ -4,7 +4,7 @@ spring:
   application:
     name: fraud
   datasource:
-    username: postgres
+    username: stepan
     password: 1234
     url: jdbc:postgresql://localhost:5432/fraud
   jpa:
@@ -15,3 +15,8 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
+
+eureka:
+  client:
+    service-url:
+      default-zone: http//:localhost:8761/fraud
